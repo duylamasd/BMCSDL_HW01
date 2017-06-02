@@ -41,25 +41,26 @@
             this.refresh = new System.Windows.Forms.Button();
             this.modBox = new System.Windows.Forms.TextBox();
             this.Modulus = new System.Windows.Forms.Label();
+            this.generate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // thresHoldBox
             // 
-            this.thresHoldBox.Location = new System.Drawing.Point(12, 29);
+            this.thresHoldBox.Location = new System.Drawing.Point(12, 27);
             this.thresHoldBox.Name = "thresHoldBox";
             this.thresHoldBox.Size = new System.Drawing.Size(104, 20);
             this.thresHoldBox.TabIndex = 0;
             // 
             // privateBox
             // 
-            this.privateBox.Location = new System.Drawing.Point(12, 74);
+            this.privateBox.Location = new System.Drawing.Point(12, 69);
             this.privateBox.Name = "privateBox";
             this.privateBox.Size = new System.Drawing.Size(104, 20);
             this.privateBox.TabIndex = 1;
             // 
             // calculatedBox
             // 
-            this.calculatedBox.Location = new System.Drawing.Point(12, 114);
+            this.calculatedBox.Location = new System.Drawing.Point(12, 106);
             this.calculatedBox.Name = "calculatedBox";
             this.calculatedBox.Size = new System.Drawing.Size(104, 20);
             this.calculatedBox.TabIndex = 2;
@@ -67,53 +68,52 @@
             // providedList
             // 
             this.providedList.FormattingEnabled = true;
-            this.providedList.ItemHeight = 14;
-            this.providedList.Location = new System.Drawing.Point(133, 30);
+            this.providedList.Location = new System.Drawing.Point(133, 28);
             this.providedList.Name = "providedList";
-            this.providedList.Size = new System.Drawing.Size(139, 200);
+            this.providedList.Size = new System.Drawing.Size(458, 186);
             this.providedList.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Location = new System.Drawing.Point(9, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 14);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Threshold";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 57);
+            this.label2.Location = new System.Drawing.Point(9, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 14);
+            this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Private key";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 97);
+            this.label3.Location = new System.Drawing.Point(9, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 14);
+            this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Caculated key";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(130, 9);
+            this.label4.Location = new System.Drawing.Point(130, 8);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 14);
+            this.label4.Size = new System.Drawing.Size(74, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Provided keys";
             // 
             // provide
             // 
-            this.provide.Location = new System.Drawing.Point(12, 207);
+            this.provide.Location = new System.Drawing.Point(12, 200);
             this.provide.Name = "provide";
-            this.provide.Size = new System.Drawing.Size(104, 23);
+            this.provide.Size = new System.Drawing.Size(104, 21);
             this.provide.TabIndex = 8;
             this.provide.Text = "Provide keys";
             this.provide.UseVisualStyleBackColor = true;
@@ -121,9 +121,9 @@
             // 
             // caculate
             // 
-            this.caculate.Location = new System.Drawing.Point(12, 245);
+            this.caculate.Location = new System.Drawing.Point(12, 227);
             this.caculate.Name = "caculate";
-            this.caculate.Size = new System.Drawing.Size(104, 23);
+            this.caculate.Size = new System.Drawing.Size(104, 21);
             this.caculate.TabIndex = 9;
             this.caculate.Text = "Calculate key";
             this.caculate.UseVisualStyleBackColor = true;
@@ -131,9 +131,9 @@
             // 
             // refresh
             // 
-            this.refresh.Location = new System.Drawing.Point(133, 245);
+            this.refresh.Location = new System.Drawing.Point(305, 227);
             this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(104, 23);
+            this.refresh.Size = new System.Drawing.Size(104, 21);
             this.refresh.TabIndex = 10;
             this.refresh.Text = "Refresh";
             this.refresh.UseVisualStyleBackColor = true;
@@ -141,7 +141,7 @@
             // 
             // modBox
             // 
-            this.modBox.Location = new System.Drawing.Point(12, 154);
+            this.modBox.Location = new System.Drawing.Point(12, 143);
             this.modBox.Name = "modBox";
             this.modBox.Size = new System.Drawing.Size(104, 20);
             this.modBox.TabIndex = 11;
@@ -149,17 +149,28 @@
             // Modulus
             // 
             this.Modulus.AutoSize = true;
-            this.Modulus.Location = new System.Drawing.Point(12, 137);
+            this.Modulus.Location = new System.Drawing.Point(12, 127);
             this.Modulus.Name = "Modulus";
-            this.Modulus.Size = new System.Drawing.Size(47, 14);
+            this.Modulus.Size = new System.Drawing.Size(47, 13);
             this.Modulus.TabIndex = 12;
             this.Modulus.Text = "Modulus";
             // 
+            // generate
+            // 
+            this.generate.Location = new System.Drawing.Point(12, 171);
+            this.generate.Name = "generate";
+            this.generate.Size = new System.Drawing.Size(104, 23);
+            this.generate.TabIndex = 13;
+            this.generate.Text = "Generate";
+            this.generate.UseVisualStyleBackColor = true;
+            this.generate.Click += new System.EventHandler(this.generate_Click);
+            // 
             // ThresHoldSchemeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 280);
+            this.ClientSize = new System.Drawing.Size(603, 260);
+            this.Controls.Add(this.generate);
             this.Controls.Add(this.Modulus);
             this.Controls.Add(this.modBox);
             this.Controls.Add(this.refresh);
@@ -195,5 +206,6 @@
         private System.Windows.Forms.Button refresh;
         private System.Windows.Forms.TextBox modBox;
         private System.Windows.Forms.Label Modulus;
+        private System.Windows.Forms.Button generate;
     }
 }

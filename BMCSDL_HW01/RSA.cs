@@ -13,19 +13,18 @@ namespace BMCSDL_HW01
 {
     public partial class RSA : Form
     {
-        private RSAParameters keyInfo { get; set; }
+        RSAProtocol protocol { get; set; }
         private byte[] cipher { get; set; }
         private byte[] decrypted { get; set; }
 
         public RSA()
         {
             InitializeComponent();
+            protocol = new RSAProtocol();
         }
 
         private void encrypt_Click(object sender, EventArgs e)
         {
-            RSAProtocol protocol = new RSAProtocol();
-
             if (plainTextBox.Text == "Type any thing here for plain text.")
             {
                 MessageBox.Show("Enter you string which you want to encrypt.");
@@ -37,9 +36,8 @@ namespace BMCSDL_HW01
 
             string cipherText = Encoding.Unicode.GetString(cipher);
             cipherTextBox.Text = cipherText;
-            string publicKeyInfo = protocol.publicKey;
+            string publicKeyInfo = protocol.e.ToString();
             publicKeyBox.Text = publicKeyInfo;
-            keyInfo = protocol.keyInfo;
 
             MessageBox.Show("Encrypting done!");
         }
@@ -52,9 +50,7 @@ namespace BMCSDL_HW01
                 return;
             }
 
-            RSAProtocol protocol = new RSAProtocol();
-
-            decrypted = protocol.decryptBytes(cipher, keyInfo);
+            decrypted = protocol.decryptBytes(cipher);
 
             string decryptResult = Encoding.Unicode.GetString(decrypted);
             decryptedTextBox.Text = decryptResult;
